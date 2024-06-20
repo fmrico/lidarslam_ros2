@@ -1,5 +1,6 @@
 scan_matcher:
   ros__parameters:
+    use_sim_time: True
     registration_method: "NDT"
     ndt_resolution: 2.0
     ndt_num_threads: 0

@@ -1,14 +1,17 @@
 scan_matcher:
   ros__parameters:
+    use_sim_time: True
     global_frame_id: "map"
-    robot_frame_id: "base_link"
+
+    robot_frame_id: "robot_base_link"
+    odom_frame_id: "robot_odom"
     registration_method: "NDT"
     ndt_resolution: 2.0
     ndt_num_threads: 2
     gicp_corr_dist_threshold: 5.0
     trans_for_mapupdate: 1.5
     vg_size_for_input: 0.5
-    vg_size_for_map: 0.1
+    vg_size_for_map: 0.2
     use_min_max_filter: true
     scan_min_range: 1.0
     scan_max_range: 200.0
@@ -29,10 +32,11 @@ scan_matcher:
 
 graph_based_slam:
     ros__parameters:
+      use_sim_time: True
       registration_method: "NDT"
       ndt_resolution: 1.0
       ndt_num_threads: 2
-      voxel_leaf_size: 0.1
+      voxel_leaf_size: 0.2
       loop_detection_period: 3000
       threshold_loop_closure_score: 0.7
       distance_loop_closure: 100.0
@@ -41,4 +45,3 @@ graph_based_slam:
       num_adjacent_pose_cnstraints: 5
       use_save_map_in_loop: true
       debug_flag: true
-

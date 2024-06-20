@@ -7,3 +7,4 @@ graph_based_slam:
       threshold_loop_closure_score: 1.5
       distance_loop_closure: 30.0
       debug_flag: false
+      use_save_map_in_loop: true

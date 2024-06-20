@@ -39,7 +39,7 @@ def generate_launch_description():
     tf = launch_ros.actions.Node(
         package='tf2_ros',
         executable='static_transform_publisher',
-        arguments=['0','0','0','0','0','0','1','base_link','velodyne']
+        arguments=['0','0','0','0','0','0','1','robot_base_link','/robot/front_laser/points']
         )
 
 

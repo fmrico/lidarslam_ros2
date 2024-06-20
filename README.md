@@ -40,16 +40,16 @@ colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 ### frontend(scan-matcher) 
 - input  
 /input_cloud  (sensor_msgs/PointCloud2)  
-/tf(from "base_link" to LiDAR's frame)  
+/tf(from "robot_base_link" to LiDAR's frame)  
 /initial_pose  (geometry_msgs/PoseStamed)(optional)  
 /imu  (sensor_msgs/Imu)(optional)  
-/tf(from "odom" to "base_link")(Odometry)(optional)  
+/tf(from "odom" to "robot_base_link")(Odometry)(optional)  
 
 - output  
 /current_pose (geometry_msgs/PoseStamped)  
 /map  (sensor_msgs/PointCloud2)  
 /path  (nav_msgs/Path)  
-/tf(from "map" to "base_link")  
+/tf(from "map" to "robot_base_link")  
 /map_array(lidarslam_msgs/MapArray)
 
 ### backend(graph-based-slam)

@@ -244,7 +244,7 @@ void ScanMatcherComponent::initializePubSub()
 
   input_cloud_sub_ =
     create_subscription<sensor_msgs::msg::PointCloud2>(
-    "input_cloud", rclcpp::SensorDataQoS(), cloud_callback);
+    "input_cloud", rclcpp::SensorDataQoS().reliable(), cloud_callback);
 
   // pub
   pose_pub_ = create_publisher<geometry_msgs::msg::PoseStamped>(
